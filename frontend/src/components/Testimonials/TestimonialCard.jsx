@@ -1,5 +1,6 @@
 import './TestimonialCard.css';
 
+
 export default function TestimonialCard({ guestImage, guestName, rating, testimonialText }) {
   return (
     <div className="testimonial-card">
@@ -8,7 +9,14 @@ export default function TestimonialCard({ guestImage, guestName, rating, testimo
         <div>
           <h4>{guestName}</h4>
           <div className="rating">
-            {'★'.repeat(rating)}
+            {Array.from({ length: rating }).map((_, index) => (
+              <img 
+                key={index} 
+                src="/src/assets/icons/star.png" 
+                alt="star" 
+                className="star-icon" 
+              />
+            ))}
           </div>
         </div>
       </div>

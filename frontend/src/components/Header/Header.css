@@ -9,29 +9,31 @@
 
 /* ============ HEADER ============ */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(180deg, #413A08 2.66%, rgba(65, 58, 8, 0.720455) 28.53%, rgba(65, 58, 8, 0.59) 42.23%, rgba(255, 255, 255, 0) 79.13%);
-  backdrop-filter: blur(5px);
   z-index: 100;
-  padding: 20px 0;
+  padding: 30px 96px;
+  height: 296px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 215px;
 }
 
 .header-container {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
   gap: 80px;
 }
 
 .logo img {
-  height: 70px;
+  height: 90px;
   width: auto;
-  margin-right: 120px;
 }
 
 .header-right {
@@ -45,7 +47,6 @@
   display: flex;
   gap: 32px;
   flex: 0;
-  margin-left: 0;
 }
 
 .nav-menu a {
@@ -71,6 +72,7 @@
   font-size: 14px;
   cursor: pointer;
   transition: background 0.3s ease;
+  white-space: nowrap;
 }
 
 .book-now-btn:hover {
@@ -79,19 +81,26 @@
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
-  .header-container {
-    padding: 0 24px;
+  .header {
+    padding: 40px 48px;
+    height: auto;
+    gap: 100px;
   }
 
   .nav-menu {
     gap: 20px;
-    margin-left: 40px;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 20px 16px;
+    height: auto;
+    gap: 20px;
+  }
+
   .header-container {
-    padding: 0 16px;
+    gap: 20px;
   }
 
   .nav-menu {

@@ -5,9 +5,9 @@ export default function Testimonials({ testimonials, heartIconSrc }) {
   return (
     <section className="testimonials-section">
       <div className="testimonials-header">
-        <div className="heart-icons">
-          <img src={heartIconSrc} alt="heart" className="heart-icon" />
-          <img src={heartIconSrc} alt="heart" className="heart-icon" />
+        <div className="testimonials-heart-icons">
+           <img src={heartIconSrc} alt="heart" className="testimonials-heart-icon" />
+           <img src={heartIconSrc} alt="heart" className="testimonials-heart-icon" />
         </div>
         <h2>What our guests say</h2>
       </div>

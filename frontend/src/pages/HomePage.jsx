@@ -2,31 +2,36 @@ import { useState } from 'react';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Testimonials from '../components/Testimonials/Testimonials';
+import FindYourPlace from '../components/FindYourPlace/FindYourPlace';
+import VirtualTourHero from '../components/VirtualTour/VirtualTourHero';
 
 // Import assets
 import logoImg from '../assets/images/logo.png';
+import testimonialImg1 from '../assets/images/guest1.png';
+import testimonialImg2 from '../assets/images/guest2.png';
+import testimonialImg3 from '../assets/images/guest3.png';
 import heartIcon from '../assets/icons/heart-icon.png';
 import headerVideo from '../assets/videos/header-video.mp4';
 
 export default function HomePage() {
   const [testimonials] = useState([
     {
-      guestImage: 'https://via.placeholder.com/50/413A08/FFFFFF?text=G1',
+      guestImage: testimonialImg1,
       guestName: 'Verified Guest',
       rating: 5,
-      testimonialText: 'Loved the cozy aesthetic and outdoor kitchen! Met amazing people, stayed connected with friends'
+      testimonialText: '"Loved the peaceful setting and outdoor kitchen! Met amazing people, stayed connected with fast Wi-Fi, and enjoyed the plunge pool after exploring nature trails nearby."'
     },
     {
-      guestImage: 'https://via.placeholder.com/50/413A08/FFFFFF?text=G2',
+      guestImage: testimonialImg2,
       guestName: 'Verified Guest',
       rating: 5,
-      testimonialText: 'Reliable high-speed internet, quiet spaces, and scenic views. Simply phenomenal!'
+      testimonialText: '"Perfect for remote work! Reliable high-speed internet, quiet spaces, and scenic views made my stay productive and relaxing. Great community vibe and secure lockers for peace of mind."'
     },
     {
-      guestImage: 'https://via.placeholder.com/50/413A08/FFFFFF?text=G3',
+      guestImage: testimonialImg3,
       guestName: 'Nature Island Guru',
       rating: 5,
-      testimonialText: 'Our favorite getaway! Cozy cabins, natural pond, and shared outdoor kitchen made it perfect.'
+      testimonialText: '"Our favorite getaway! Cozy cabins, natural pond, and shared outdoor kitchen made evenings magical. The plunge pool was a refreshing bonus after hiking adventures."'
     }
   ]);
 
@@ -35,6 +40,8 @@ export default function HomePage() {
       <Header logoSrc={logoImg} />
       <Hero videoSrc={headerVideo} />
       <Testimonials testimonials={testimonials} heartIconSrc={heartIcon} />
+      <FindYourPlace />
+      <VirtualTourHero />
     </div>
   );
 }
