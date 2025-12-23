@@ -1,0 +1,122 @@
+/* Color Variables */
+:root {
+  --color-alabaster-grey: #D9D9D9;
+  --color-light-cyan: #C4E9EB;
+  --color-dark-khaki: #413A08;
+  --color-carrot-orange: #E88B00;
+  --color-white: #FFFFFF;
+}
+
+/* ============ HERO SECTION ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  position: relative;
+  width: 102.08vw;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: calc(-50vw + 50%);
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 150px;
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 150px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.booking-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--color-white);
+  color: var(--color-dark-khaki);
+}
+
+.booking-form input::placeholder {
+  color: #999;
+}
+
+.find-room-btn {
+  padding: 14px 28px;
+  background: var(--color-carrot-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.find-room-btn:hover {
+  background: #d97800;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 500px;
+    margin-top: 60px;
+  }
+
+  .booking-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .booking-form input,
+  .find-room-btn {
+    width: 100%;
+  }
+}
