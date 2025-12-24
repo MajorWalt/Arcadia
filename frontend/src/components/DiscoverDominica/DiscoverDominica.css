@@ -1,0 +1,162 @@
+/* Discover Dominica Hero Component Styles */
+
+/* Hero_Advert */
+.discover-dominica-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px 0px 96px;
+  gap: 10px;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video Background */
+.discover-dominica-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Caption Box */
+/* Desktop_Hero_Div_Caption */
+.discover-dominica-caption {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 35px 25px 35px 132px;
+  gap: 21px;
+  width: 950px;
+  height: 225px;
+  background: #413A08;
+  backdrop-filter: blur(9.15px);
+  z-index: 2;
+  position: relative;
+}
+
+.discover-dominica-content {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Title */
+.discover-dominica-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin: 0;
+  white-space: nowrap;
+  padding-right: 21px;
+  border-right: 1px solid var(--color-white);
+}
+
+/* Text Section */
+.discover-dominica-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* Description */
+.discover-dominica-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin: 0;
+  max-width: 300px;
+}
+
+/* Button */
+.discover-dominica-btn {
+  padding: 10px 32px;
+  border-radius: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--color-dark-khaki);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.discover-dominica-btn-icon {
+  width: 16px;
+  height: 16px;
+  padding-left: 1px;
+  display: inline-block;
+  
+}
+
+
+.discover-dominica-btn:hover {
+  background-color: #2d2906;
+  opacity: 0.9;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .discover-dominica-hero {
+    height: 600px;
+    padding: 0px 0px 80px;
+  }
+
+  .discover-dominica-caption {
+    width: 85%;
+    height: auto;
+    padding: 30px 20px 30px 80px;
+  }
+
+  .discover-dominica-title {
+    font-size: 48px;
+  }
+
+  .discover-dominica-description {
+    font-size: 13px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-dominica-hero {
+    height: 500px;
+    padding: 0px 0px 60px;
+  }
+
+  .discover-dominica-caption {
+    width: 90%;
+    height: auto;
+    padding: 25px 16px 25px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .discover-dominica-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .discover-dominica-title {
+    font-size: 36px;
+  }
+
+  .discover-dominica-description {
+    font-size: 12px;
+    max-width: 100%;
+  }
+}

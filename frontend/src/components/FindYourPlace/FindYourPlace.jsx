@@ -6,6 +6,7 @@ import place1 from '../../assets/images/place1.png';
 import place2 from '../../assets/images/place2.png';
 import place3 from '../../assets/images/place3.png';
 import place4 from '../../assets/images/place4.png';
+import place5 from '../../assets/images/place5.png';
 import heartIcon from '../../assets/icons/heart-icon.png';
 
 // Header Component
@@ -60,7 +61,7 @@ function CardCarousel() {
 
  const cards = [
     { image: place1, label: 'For the Escapist' },
-    { image: place2, label: 'For the Groups' },
+    { image: place5, label: 'For the Groups' },
     { image: place3, label: 'For the Writers' },
     { image: place4, label: 'For the Adventurer' },
   ];

@@ -4,6 +4,10 @@ import Hero from '../components/Hero/Hero';
 import Testimonials from '../components/Testimonials/Testimonials';
 import FindYourPlace from '../components/FindYourPlace/FindYourPlace';
 import VirtualTourHero from '../components/VirtualTour/VirtualTourHero';
+import VillaSuite from '../components/VillaSuite/VillaSuite';
+import InLineAd from '../components/InLineAd/InLineAd';
+import Hostel from '../components/Hostel/Hostel';
+import DiscoverDominica from '../components/DiscoverDominica/DiscoverDominica';
 
 // Import assets
 import logoImg from '../assets/images/logo.png';
@@ -12,6 +16,7 @@ import testimonialImg2 from '../assets/images/guest2.png';
 import testimonialImg3 from '../assets/images/guest3.png';
 import heartIcon from '../assets/icons/heart-icon.png';
 import headerVideo from '../assets/videos/header-video.mp4';
+
 
 export default function HomePage() {
   const [testimonials] = useState([
@@ -40,8 +45,12 @@ export default function HomePage() {
       <Header logoSrc={logoImg} />
       <Hero videoSrc={headerVideo} />
       <Testimonials testimonials={testimonials} heartIconSrc={heartIcon} />
-      <FindYourPlace />
+      <VillaSuite />
       <VirtualTourHero />
+      <FindYourPlace />
+      <InLineAd />
+      <Hostel/>
+      <DiscoverDominica />
     </div>
   );
 }
