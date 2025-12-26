@@ -1,0 +1,189 @@
+/* Amenities Component Styles */
+
+.amenities-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 60px 16px;
+  background-color: #E8ECED;
+}
+
+.amenities-content {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 16px;
+}
+
+/* Header */
+.amenities-header {
+  margin-bottom: 24px;
+}
+
+.amenities-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #413A08;
+  margin: 0;
+}
+
+/* Description */
+.amenities-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #413A08;
+  margin: 0 0 24px 0;
+  max-width: 600px;
+}
+
+/* Action Buttons */
+.amenities-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #413A08;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #413A08;
+  border: 2px solid #413A08;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Amenity Card */
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.amenity-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.amenity-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #413A08;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.amenity-description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #413A08;
+  margin: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .amenities-title {
+    font-size: 40px;
+  }
+
+  .amenity-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenities-container {
+    padding: 40px 16px;
+  }
+
+  .amenities-content {
+    margin-bottom: 40px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .amenities-title {
+    font-size: 32px;
+  }
+
+  .amenities-description {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .amenities-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .amenity-card {
+    padding: 16px;
+  }
+
+  .amenity-title {
+    font-size: 14px;
+  }
+
+  .amenity-description {
+    font-size: 12px;
+  }
+}

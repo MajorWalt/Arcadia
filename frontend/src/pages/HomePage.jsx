@@ -8,6 +8,8 @@ import VillaSuite from '../components/VillaSuite/VillaSuite';
 import InLineAd from '../components/InLineAd/InLineAd';
 import Hostel from '../components/Hostel/Hostel';
 import DiscoverDominica from '../components/DiscoverDominica/DiscoverDominica';
+import Amenities from '../components/Amenities/Amenities';
+import Footer from '../components/Footer/Footer';
 
 // Import assets
 import logoImg from '../assets/images/logo.png';
@@ -16,6 +18,7 @@ import testimonialImg2 from '../assets/images/guest2.png';
 import testimonialImg3 from '../assets/images/guest3.png';
 import heartIcon from '../assets/icons/heart-icon.png';
 import headerVideo from '../assets/videos/header-video.mp4';
+
 
 
 export default function HomePage() {
@@ -51,6 +54,8 @@ export default function HomePage() {
       <InLineAd />
       <Hostel/>
       <DiscoverDominica />
+      <Amenities /> 
+      <Footer />
     </div>
   );
 }
