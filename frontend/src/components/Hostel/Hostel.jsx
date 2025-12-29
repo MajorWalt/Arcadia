@@ -17,11 +17,25 @@ function Header() {
   );
 }
 
+// Mobile Header Component with inline button
+function MobileHeader() {
+  return (
+    <div className="hostel-header">
+      <h1 className="hostel-title">
+        Our Hostel
+      </h1>
+      <button className="mobile-hostel-btn">
+        Explore
+      </button>
+    </div>
+  );
+}
+
 // Description Component
 function Description() {
   return (
     <p className="hostel-description">
-      Set in a peaceful natural retreat, our cabin hostel offers cozy shared spaces and modern conveniences for an authentic getaway. Surrounded by greenery and scenic views.
+     Indulge in a romantic escape with our Lover Suite, featuring elegant décor and intimate comfort for two. Surrounded by serene beauty and designed for unforgettable moments.
     </p>
   );
 }
@@ -51,15 +65,14 @@ function ImageCard({ image, label }) {
 }
 
 // Carousel Component
-function CardCarousel() {
+function CardCarousel({ currentIndex, totalCards }) {
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
- const cards = [
+  const cards = [
     { image: place6, label: 'The Mountain Room' },
     { image: place7, label: 'The River Room' },
-   
   ];
 
   const scroll = (direction) => {
@@ -94,7 +107,6 @@ function CardCarousel() {
   }, []);
 
   return (
-    
     <div className="carousel-container">
       {canScrollLeft && (
         <button
@@ -129,23 +141,48 @@ function CardCarousel() {
 
 // Main Component
 export default function Hostel() {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= 768 : false
+  );
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="hostel-container">
       <div className="hostel-wrapper">
         {/* Left Section */}
         <div className="hostel-content">
-          <Header />
+          {isMobile ? <MobileHeader /> : <Header />}
           <Description />
           <ActionButtons />
         </div>
 
         {/* Right Section - Carousel */}
         <div className="hostel-carousel-wrapper">
-                <div className="hostel-heart-icons">
-                    <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
-                    <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
-                </div>
-          <CardCarousel />
+          {!isMobile && (
+            <div className="hostel-heart-icons">
+              <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
+              <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
+            </div>
+          )}
+          
+          <CardCarousel currentIndex={1} totalCards={2} />
+          
+          {isMobile && (
+            <div className="hostel-heart-icons">
+              <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
+              <span className="carousel-counter">1 of 2</span>
+              <img src={heartIcon} alt="heart" className="hostel-heart-icon" />
+            </div>
+          )}
         </div>
       </div>
     </div>

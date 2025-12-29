@@ -26,6 +26,11 @@
   margin: 0;
 }
 
+/* Mobile button (hidden on desktop) */
+.mobile-amenities-btn {
+  display: none;
+}
+
 /* Description */
 .amenities-description {
   font-size: 14px;
@@ -125,6 +130,11 @@
   margin: 0;
 }
 
+/* Counter (hidden on desktop) */
+.amenities-counter {
+  display: none;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
   .amenities-grid {
@@ -143,47 +153,118 @@
 
 @media (max-width: 768px) {
   .amenities-container {
-    padding: 40px 16px;
+    padding: 24px 16px;
+    background-color: #E8E4D9;
   }
 
   .amenities-content {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
-  .amenities-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  /* Header with inline button */
+  .amenities-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
   }
 
   .amenities-title {
-    font-size: 32px;
+    font-size: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Mobile button in header */
+  .mobile-amenities-btn {
+    display: block;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #413A08;
+    color: white;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
   }
 
   .amenities-description {
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 1.5;
     max-width: 100%;
+    margin-bottom: 16px;
   }
 
+  /* Hide desktop buttons */
   .amenities-buttons {
-    flex-direction: column;
+    display: none;
+  }
+
+  /* Carousel grid */
+  .amenities-grid {
+    display: flex;
     gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 8px;
+    grid-template-columns: none;
   }
 
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
+  .amenities-grid::-webkit-scrollbar {
+    display: none;
   }
 
+  /* Amenity cards in carousel */
   .amenity-card {
-    padding: 16px;
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: white;
+  }
+
+  /* Counter at bottom */
+  .amenities-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    margin-top: 12px;
+  }
+
+  .amenities-counter-text {
+    font-size: 13px;
+    color: #413A08;
+    font-weight: 500;
+  }
+
+  .amenities-heart-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  .amenity-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
   }
 
   .amenity-title {
     font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .amenity-description {
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 }

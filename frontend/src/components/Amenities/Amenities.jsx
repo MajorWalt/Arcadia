@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Amenities.css';
 
 import entertainmentIcon from '../../assets/icons/entertainmentIcon.png';
@@ -9,12 +9,25 @@ import laundryIcon from '../../assets/icons/laundryIcon.png';
 import shuttleIcon from '../../assets/icons/shuttleIcon.png';
 import securityIcon from '../../assets/icons/securityIcon.png';
 import breakfastIcon from '../../assets/icons/breakfastIcon.png';
+import heartIcon from '../../assets/icons/heart-icon.png';
 
 // Header Component
 function Header() {
   return (
     <div className="amenities-header">
       <h1 className="amenities-title">Amenities</h1>
+    </div>
+  );
+}
+
+// Mobile Header Component with inline button
+function MobileHeader() {
+  return (
+    <div className="amenities-header">
+      <h1 className="amenities-title">All the Amenities</h1>
+      <button className="mobile-amenities-btn">
+        Gallery
+      </button>
     </div>
   );
 }
@@ -54,12 +67,23 @@ function AmenityCard({ icon, title, description }) {
 }
 
 // Amenities Grid Component
-function AmenitiesGrid() {
+function AmenitiesGrid({ onScroll }) {
+  const scrollRef = React.useRef(null);
+
+  const handleScroll = () => {
+    if (scrollRef.current && onScroll) {
+      const scrollLeft = scrollRef.current.scrollLeft;
+      const cardWidth = 280 + 12; // card width + gap
+      const currentIndex = Math.round(scrollLeft / cardWidth);
+      onScroll(currentIndex);
+    }
+  };
+
   const amenities = [
     {
       icon: entertainmentIcon,
       title: 'Entertainment Areas',
-      description: 'Relax in our thoughtfully designed entertainment areas, large decks & balconies, take in stunning views and immerse yourself in nature.'
+      description: 'Relax and socialize in our inviting entertainment spaces, featuring large decks & balconies, take in stunning views and immerse yourself in nature.'
     },
     {
       icon: poolIcon,
@@ -99,7 +123,11 @@ function AmenitiesGrid() {
   ];
 
   return (
-    <div className="amenities-grid">
+    <div 
+      ref={scrollRef}
+      className="amenities-grid" 
+      onScroll={handleScroll}
+    >
       {amenities.map((amenity, index) => (
         <AmenityCard
           key={index}
@@ -112,16 +140,48 @@ function AmenitiesGrid() {
   );
 }
 
+// Counter Component for Mobile
+function AmenitiesCounter({ currentIndex, totalCount }) {
+  return (
+    <div className="amenities-counter">
+      <img src={heartIcon} alt="heart" className="amenities-heart-icon" />
+      <span className="amenities-counter-text">{currentIndex + 1} of {totalCount}</span>
+      <img src={heartIcon} alt="heart" className="amenities-heart-icon" />
+    </div>
+  );
+}
+
 // Main Component
 export default function Amenities() {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= 768 : false
+  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalAmenities = 8;
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleScroll = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="amenities-container">
       <div className="amenities-content">
-        <Header />
+        {isMobile ? <MobileHeader /> : <Header />}
         <Description />
         <ActionButtons />
       </div>
-      <AmenitiesGrid />
+      <AmenitiesGrid onScroll={isMobile ? handleScroll : null} />
+      {isMobile && <AmenitiesCounter currentIndex={currentIndex} totalCount={totalAmenities} />}
     </div>
   );
 }
