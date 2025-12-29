@@ -2,6 +2,7 @@ import React from 'react';
 import './InLineAd.css';
 
 export default function InLineAd() {
+    console.log('InLineAd component rendered');
   return (
     <div className="inline-ad-container">
       <h2 className="inline-ad-heading">

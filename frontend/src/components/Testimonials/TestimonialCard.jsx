@@ -1,5 +1,5 @@
 import './TestimonialCard.css';
-
+import starIcon from '../../assets/icons/star.png';
 
 export default function TestimonialCard({ guestImage, guestName, rating, testimonialText }) {
   return (
@@ -12,7 +12,7 @@ export default function TestimonialCard({ guestImage, guestName, rating, testimo
             {Array.from({ length: rating }).map((_, index) => (
               <img 
                 key={index} 
-                src="/src/assets/icons/star.png" 
+                src={starIcon} 
                 alt="star" 
                 className="star-icon" 
               />

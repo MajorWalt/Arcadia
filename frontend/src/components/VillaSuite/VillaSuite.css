@@ -230,3 +230,72 @@
 .carousel-btn.hidden {
   display: none;
 }
+
+@media (max-width: 768px) {
+
+  /* Main container */
+  .villa-suite-container {
+    padding: 40px 16px;
+  }
+
+  /* Stack content + carousel */
+  .villa-suite-wrapper {
+    flex-direction: column;
+    gap: 31px; /* from Frame 398 */
+    align-items: flex-start;
+  }
+
+  /* Content block (Frame 398 applied here) */
+  .villa-suite-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 31px;
+    width: 390px;
+    max-width: 100%;
+    height: auto;
+    order: 1;
+  }
+
+  /* Title scale down */
+  .villa-suite-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  /* Buttons stack */
+  .villa-suite-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hearts alignment */
+  .villa-suite-heart-icons {
+    justify-content: flex-start;
+    padding-right: 0;
+    gap: 24px;
+  }
+
+  .villa-suite-heart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Carousel cards resized for mobile */
+  .image-card {
+    width: 390px;
+    height: 421px; /* from Frame 398 */
+  }
+
+  /* Hide carousel buttons on mobile (swipe instead) */
+  .carousel-btn {
+    display: none;
+  }
+}

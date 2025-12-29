@@ -1,5 +1,6 @@
 /* Desktop_In-Line_Ad */
 .inline-ad-container {
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -7,6 +8,7 @@
   gap: 15px;
   position: relative;
   width: 100vw;
+  margin-left: calc(-50vw + 50%);
   height: 322px;
   background: #000000;
   backdrop-filter: blur(9.15px);
