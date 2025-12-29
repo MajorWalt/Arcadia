@@ -20,11 +20,25 @@ function Header() {
   );
 }
 
+// Mobile Header Component with inline Blog button
+function MobileHeader() {
+  return (
+    <div className="find-your-place-header">
+      <h1 className="find-your-place-title">
+        Find Your Place
+      </h1>
+      <button className="mobile-blog-btn">
+        Blog
+      </button>
+    </div>
+  );
+}
+
 // Description Component
 function Description() {
   return (
     <p className="find-your-place-description">
-      quiet nooks for writers, romantic suites for couples, and spacious retreats for families and groups. Surrounded by lush greenery and panoramic views, our villa blends refined style with modern comfort for an unforgettable stay.
+      Each room is thoughtfully equipped with modern comfort, including plush bedding, private bathrooms, and reliable Wi-Fi. Enjoy a serene atmosphere with essential conveniences for a relaxing stay.
     </p>
   );
 }
@@ -54,13 +68,13 @@ function ImageCard({ image, label }) {
 }
 
 // Carousel Component
-function CardCarousel() {
+function CardCarousel({ currentIndex, totalCards }) {
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
- const cards = [
-    { image: place1, label: 'For the Escapist' },
+  const cards = [
+    { image: place1, label: 'For the Escapists' },
     { image: place5, label: 'For the Groups' },
     { image: place3, label: 'For the Writers' },
     { image: place4, label: 'For the Adventurer' },
@@ -98,7 +112,6 @@ function CardCarousel() {
   }, []);
 
   return (
-    
     <div className="carousel-container">
       {canScrollLeft && (
         <button
@@ -133,23 +146,45 @@ function CardCarousel() {
 
 // Main Component
 export default function FindYourPlace() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="find-your-place-container">
       <div className="find-your-place-wrapper">
         {/* Left Section */}
         <div className="find-your-place-content">
-          <Header />
+          {isMobile ? <MobileHeader /> : <Header />}
           <Description />
           <ActionButtons />
         </div>
 
         {/* Right Section - Carousel */}
         <div className="find-your-place-carousel-wrapper">
-                <div className="find-your-place-heart-icons">
-                    <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
-                    <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
-                </div>
-          <CardCarousel />
+          {!isMobile && (
+            <div className="find-your-place-heart-icons">
+              <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
+              <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
+            </div>
+          )}
+          
+          <CardCarousel currentIndex={1} totalCards={4} />
+          
+          {isMobile && (
+            <div className="find-your-place-heart-icons">
+              <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
+              <span className="carousel-counter">1 of 4</span>
+              <img src={heartIcon} alt="heart" className="find-your-place-heart-icon" />
+            </div>
+          )}
         </div>
       </div>
     </div>

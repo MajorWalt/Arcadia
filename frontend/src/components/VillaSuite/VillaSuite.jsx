@@ -20,11 +20,25 @@ function Header() {
   );
 }
 
+// Mobile Header Component with inline Explore button
+function MobileHeader() {
+  return (
+    <div className="villa-suite-header">
+      <h1 className="villa-suite-title">
+        The Villa Suites
+      </h1>
+      <button className="mobile-explore-btn">
+        Explore
+      </button>
+    </div>
+  );
+}
+
 // Description Component
 function Description() {
   return (
     <p className="villa-suite-description">
-      Our villa suites feature spacious interiors, elegant furnishings, and private terraces, blending modern with serene surroundings for a truly unforgettable escape.
+      Tucked away in a serene setting, our villa suites combine refined style with modern amenities for an unforgettable stay. Surrounded by lush greenery and panoramic views.
     </p>
   );
 }
@@ -54,12 +68,12 @@ function ImageCard({ image, label }) {
 }
 
 // Carousel Component
-function CardCarousel() {
+function CardCarousel({ currentIndex, totalCards }) {
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
- const cards = [
+  const cards = [
     { image: place5, label: 'The Harmony Room' },
     { image: place3, label: 'The Serenity Room' },
     { image: place1, label: 'The Lovers Suite' },
@@ -98,7 +112,6 @@ function CardCarousel() {
   }, []);
 
   return (
-    
     <div className="carousel-container">
       {canScrollLeft && (
         <button
@@ -133,23 +146,45 @@ function CardCarousel() {
 
 // Main Component
 export default function VillaSuite() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="villa-suite-container">
       <div className="villa-suite-wrapper">
         {/* Left Section */}
         <div className="villa-suite-content">
-          <Header />
+          {isMobile ? <MobileHeader /> : <Header />}
           <Description />
           <ActionButtons />
         </div>
 
         {/* Right Section - Carousel */}
         <div className="villa-suite-carousel-wrapper">
-                <div className="villa-suite-heart-icons">
-                    <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
-                    <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
-                </div>
-          <CardCarousel />
+          {!isMobile && (
+            <div className="villa-suite-heart-icons">
+              <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
+              <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
+            </div>
+          )}
+          
+          <CardCarousel currentIndex={1} totalCards={3} />
+          
+          {isMobile && (
+            <div className="villa-suite-heart-icons">
+              <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
+              <span className="carousel-counter">1 of 3</span>
+              <img src={heartIcon} alt="heart" className="villa-suite-heart-icon" />
+            </div>
+          )}
         </div>
       </div>
     </div>

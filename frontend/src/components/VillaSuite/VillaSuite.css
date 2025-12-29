@@ -142,6 +142,7 @@
   scrollbar-width: thin;
   scrollbar-color: #413A08 transparent;
 }
+
 /* Heart Icons - VillaSuite Component Only */
 .villa-suite-heart-icons {
   display: flex;
@@ -165,6 +166,19 @@
 .villa-suite-heart-icon:hover {
   opacity: 0.8;
 }
+
+/* Carousel Counter */
+.carousel-counter {
+  font-size: 14px;
+  color: #413A08;
+  font-weight: 500;
+}
+
+/* Mobile explore button */
+.mobile-explore-btn {
+  display: none;
+}
+
 /* Image Card */
 .image-card {
   display: flex;
@@ -235,67 +249,137 @@
 
   /* Main container */
   .villa-suite-container {
-    padding: 40px 16px;
+    padding: 20px 16px;
+    background-color: #D9D9D9;
   }
 
   /* Stack content + carousel */
   .villa-suite-wrapper {
     flex-direction: column;
-    gap: 31px; /* from Frame 398 */
+    gap: 16px;
     align-items: flex-start;
   }
 
-  /* Content block (Frame 398 applied here) */
+  /* Content block */
   .villa-suite-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
-    gap: 31px;
-    width: 390px;
+    gap: 12px;
+    width: 100%;
     max-width: 100%;
     height: auto;
+    order: 0;
+  }
+
+  /* Header with inline title and button */
+  .villa-suite-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  /* Title on one line */
+  .villa-suite-title {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Description more compact */
+  .villa-suite-description {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #413A08;
+  }
+
+  /* Hide desktop buttons */
+  .villa-suite-buttons {
+    display: none;
+  }
+
+  /* Show mobile explore button in header */
+  .mobile-explore-btn {
+    display: block;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #413A08;
+    color: white;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Carousel wrapper adjustments */
+  .villa-suite-carousel-wrapper {
+    width: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Carousel container */
+  .carousel-container {
+    width: 100%;
     order: 1;
   }
 
-  /* Title scale down */
-  .villa-suite-title {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  /* Buttons stack */
-  .villa-suite-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Hearts alignment */
+  /* Hearts move to bottom with counter */
   .villa-suite-heart-icons {
-    justify-content: flex-start;
-    padding-right: 0;
-    gap: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    gap: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    order: 2;
   }
 
   .villa-suite-heart-icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Counter in the middle */
+  .carousel-counter {
+    font-size: 13px;
+    color: #413A08;
+    font-weight: 500;
   }
 
   /* Carousel cards resized for mobile */
   .image-card {
-    width: 390px;
-    height: 421px; /* from Frame 398 */
+    width: 280px;
+    height: 380px;
+    flex-shrink: 0;
+  }
+
+  .image-card-label {
+    font-size: 16px;
+    padding: 12px;
   }
 
   /* Hide carousel buttons on mobile (swipe instead) */
   .carousel-btn {
     display: none;
+  }
+
+  /* Adjust carousel scroll for mobile */
+  .carousel-scroll {
+    gap: 12px;
+    padding-bottom: 8px;
   }
 }
