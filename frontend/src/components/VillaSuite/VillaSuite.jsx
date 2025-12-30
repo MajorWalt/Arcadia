@@ -38,7 +38,7 @@ function MobileHeader() {
 function Description() {
   return (
     <p className="villa-suite-description">
-      Tucked away in a serene setting, our villa suites combine refined style with modern amenities for an unforgettable stay. Surrounded by lush greenery and panoramic views.
+      Our villa suites feature spacious interiors, elegant furnishings, and private terraces, blending modern with serene surroundings for a truly unforgettable escape.
     </p>
   );
 }

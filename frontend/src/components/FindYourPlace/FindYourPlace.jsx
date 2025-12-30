@@ -38,7 +38,7 @@ function MobileHeader() {
 function Description() {
   return (
     <p className="find-your-place-description">
-      Each room is thoughtfully equipped with modern comfort, including plush bedding, private bathrooms, and reliable Wi-Fi. Enjoy a serene atmosphere with essential conveniences for a relaxing stay.
+      quiet nooks for writers, romantic suites for couples, and spacious retreats for families and groups. Surrounded by lush greenery and panoramic views, our villa blends refined style with modern comfort for an unforgettable stay.
     </p>
   );
 }

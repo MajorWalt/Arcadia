@@ -23,20 +23,24 @@ export default function Hero({ videoSrc }) {
 
         {/* Mobile Booking Card */}
         <div className="booking-card">
-          <div className="input-group">
-            <div className="icon-input">
-              <img src={heartIcon2} alt="" className="heart-icon" />
-              <input type="text" placeholder="Check-in" />
+          {/* Check-in and Check-out Row */}
+          <div className="input-row">
+            <div className="input-group half">
+              <div className="icon-input">
+                <img src={heartIcon2} alt="" className="heart-icon" />
+                <input type="text" placeholder="Check-in" />
+              </div>
+            </div>
+            
+            <div className="input-group half">
+              <div className="icon-input">
+                <img src={heartIcon2} alt="" className="heart-icon" />
+                <input type="text" placeholder="Check-out" />
+              </div>
             </div>
           </div>
           
-          <div className="input-group">
-            <div className="icon-input">
-              <img src={heartIcon2} alt="" className="heart-icon" />
-              <input type="text" placeholder="Check-out" />
-            </div>
-          </div>
-          
+          {/* Adults/Children and Room Row */}
           <div className="input-row">
             <div className="input-group half">
               <input type="text" value="1 Adult | 0 Children" readOnly />

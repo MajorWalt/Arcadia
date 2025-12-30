@@ -17,7 +17,7 @@ export default function InlineAd() {
     <>
       <h2 className="inline-ad-heading">NOW 20% OFF</h2>
       <p className="inline-ad-description">
-        Nestled in the heart of the countryside, this charming villa offers a perfect blend of rustic elegance and modern comfort.
+        Nestled in the heart of the countryside, this charming villa offers a perfect blend of <br /> rustic elegance and modern comfort.
       </p>
       <button className="inline-ad-button">Book Today</button>
     </>

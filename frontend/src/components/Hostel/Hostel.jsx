@@ -35,7 +35,7 @@ function MobileHeader() {
 function Description() {
   return (
     <p className="hostel-description">
-     Indulge in a romantic escape with our Lover Suite, featuring elegant décor and intimate comfort for two. Surrounded by serene beauty and designed for unforgettable moments.
+     Set in a peaceful natural retreat, our cabin hostel offers cozy shared spaces and modern conveniences for an authentic getaway. Surrounded by greenery and scenic views..
     </p>
   );
 }
