@@ -1,0 +1,281 @@
+/* Color Variables */
+:root {
+  --color-alabaster-grey: #D9D9D9;
+  --color-light-cyan: #C4E9EB;
+  --color-dark-khaki: #413A08;
+  --color-carrot-orange: #E88B00;
+  --color-white: #FFFFFF;
+}
+
+/* ============ VILLA HERO SECTION ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.villa-hero-section {
+  position: relative;
+  width: 100vw;
+  height: 392px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 0px 24px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.villa-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.villa-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 2;
+}
+
+.villa-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Villa Hero Title - Hidden on desktop */
+.villa-hero-title {
+  display: none;
+}
+
+/* Villa Booking Form */
+.villa-booking-form {
+  display: flex;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.villa-booking-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background: var(--color-white);
+  color: var(--color-dark-khaki);
+}
+
+.villa-booking-form input::placeholder {
+  color: #999;
+}
+
+.villa-find-room-btn {
+  padding: 14px 28px;
+  background: var(--color-carrot-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.villa-find-room-btn:hover {
+  background: #d97800;
+}
+
+/* Mobile booking card styles - Hidden on desktop */
+.villa-booking-card {
+  display: none;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .villa-hero-section {
+    width: 100vw;
+    height: calc(390px + 80px);
+    padding: 80px 16px 24px;
+    gap: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -450px;
+    justify-content: flex-end;
+  }
+
+  .villa-hero-content {
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Show villa hero title on mobile */
+  .villa-hero-title {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    margin: 0;
+    margin-bottom: auto;
+    padding-top: 40px;
+  }
+
+  /* Hide desktop booking form on mobile */
+  .villa-booking-form {
+    display: none;
+  }
+
+  /* Show mobile booking card */
+  .villa-booking-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 5px;
+    width: 100%;
+    max-width: 358px;
+    height: 156px;
+    background: #413A08;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+  }
+
+  .villa-input-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: 48px;
+  }
+
+  .villa-input-group {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .villa-input-group.villa-half {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  /* Check-in and Check-out styling */
+  .villa-input-row:first-child .villa-input-group.villa-half:first-child .villa-icon-input {
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .villa-input-row:first-child .villa-input-group.villa-half:last-child .villa-icon-input {
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .villa-icon-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 10px;
+    width: 100%;
+    height: 48px;
+    background: var(--color-white);
+    border: none;
+    border-radius: 8px;
+  }
+
+  .villa-heart-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .villa-icon-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #797979;
+    background: transparent;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  .villa-icon-input input::placeholder {
+    color: #797979;
+  }
+
+  /* Adults/Children and Room styling */
+  .villa-input-row:nth-child(2) .villa-input-group.villa-half:first-child input {
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .villa-input-row:nth-child(2) .villa-input-group.villa-half:last-child input {
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .villa-input-group.villa-half input {
+    width: 100%;
+    height: 48px;
+    padding: 0px 16px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #797979;
+    background: var(--color-white);
+    font-family: 'Inter', sans-serif;
+    line-height: 17px;
+  }
+
+  .villa-input-group.villa-half input:focus {
+    outline: none;
+  }
+
+  .villa-search-btn {
+    width: 100%;
+    height: 40px;
+    padding: 0px 12px;
+    background: var(--color-carrot-orange);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .villa-search-btn:hover {
+    background: #d97800;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 export default function Header({ logoSrc }) {
@@ -8,14 +9,14 @@ export default function Header({ logoSrc }) {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <a href='#'>
+          <Link to="/">
             <img src={logoSrc} alt="Arcadia Logo" />
-          </a>
+          </Link>
         </div>
 
         <div className="header-right">
           <nav className="nav-menu">
-            <a href="#villa">Villa</a>
+            <Link to="/villa">Villa</Link>
             <a href="#hostel">Hostel</a>
             <a href="#rooms">Rooms</a>
             <a href="#location">Location</a>
@@ -41,7 +42,7 @@ export default function Header({ logoSrc }) {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="mobile-menu">
-          <a href="#villa" onClick={() => setIsMenuOpen(false)}>Villa</a>
+          <Link to="/villa" onClick={() => setIsMenuOpen(false)}>Villa</Link>
           <a href="#hostel" onClick={() => setIsMenuOpen(false)}>Hostel</a>
           <a href="#rooms" onClick={() => setIsMenuOpen(false)}>Rooms</a>
           <a href="#location" onClick={() => setIsMenuOpen(false)}>Location</a>

@@ -101,7 +101,6 @@
   background-color: #D9D9D9;
   border-radius: 6px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  overflow-y: scroll;
   transition: box-shadow 0.3s ease;
 }
 
@@ -156,7 +155,7 @@
 @media (max-width: 768px) {
   .amenities-container {
     padding: 24px 16px;
-    background-color: #E8E4D9;
+    background-color: #D9D9D9;
   }
 
   .amenities-content {
@@ -229,7 +228,7 @@
     max-width: 280px;
     flex-shrink: 0;
     padding: 20px;
-    background-color: white;
+    background-color: #D9D9D9;
   }
 
   /* Counter at bottom */

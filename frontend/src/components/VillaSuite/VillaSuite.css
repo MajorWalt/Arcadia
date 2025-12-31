@@ -36,18 +36,25 @@
 }
 
 .villa-suite-title {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
+  width: 319px;
+  font-family: 'Pagnol', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 99%;
   color: #413A08;
-  margin: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 0 24px 0;
+
 }
 
 /* Description */
 .villa-suite-description {
   font-size: 14px;
   line-height: 1.6;
-  color: #413A08;
+  color: #6A6A6A;
   margin: 0;
 }
 
@@ -305,17 +312,21 @@
 
   /* Show mobile explore button in header */
   .mobile-explore-btn {
-    display: block;
-    padding: 6px 18px;
+    display: flex;
     border-radius: 9999px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     background-color: #413A08;
     color: white;
+    max-width: fit-content; 
     border: none;
     cursor: pointer;
     white-space: nowrap;
     flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: auto; /* Push to right but stay contained */
+    
   }
 
   /* Carousel wrapper adjustments */
