@@ -1,0 +1,243 @@
+/* Hostel Layout Section */
+.hostel-layout-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 96px;
+  gap: 34px;
+  width: 100vw;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+  background-color: #D9D9D9;
+}
+
+.hostel-layout-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 34px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.hostel-layout-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 9px;
+  width: 394px;
+  max-width: 394px;
+  height: 458px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.hostel-layout-title {
+  width: 319px;
+  height: 190px;
+  font-family: 'Pagnol', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 99%;
+  color: #413A08;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
+}
+
+.hostel-layout-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 29px;
+  width: 394px;
+  height: 210px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.hostel-layout-description {
+   font-size: 14px;
+  line-height: 1.6;
+  color: #6a6a6a;
+  margin: 0;
+}
+
+.hostel-layout-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 18px;
+  width: 265px;
+  height: 40px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.hostel-layout-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 4px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  flex: none;
+  flex-grow: 0;
+}
+
+.hostel-layout-btn-filled {
+  width: 118px;
+  background: #413A08;
+  color: #FFFFFF;
+  border: none;
+  order: 0;
+}
+
+.hostel-layout-btn-filled:hover {
+  background: #5a5010;
+}
+
+.hostel-layout-btn-outline {
+  box-sizing: border-box;
+  width: 129px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #413A08;
+  border: 1px solid #413A08;
+  order: 1;
+}
+
+.hostel-layout-btn-outline:hover {
+  background: #413A08;
+  color: #FFFFFF;
+}
+
+/* Right Image */
+.hostel-layout-image {
+  width: 750px;
+  height: 750px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  position: relative;
+}
+
+.hostel-layout-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1440px) {
+  .hostel-layout-section {
+    padding: 80px 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hostel-layout-section {
+    padding: 60px 40px;
+  }
+
+  .hostel-layout-image {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hostel-layout-section {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .hostel-layout-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hostel-layout-content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hostel-layout-title {
+    width: 100%;
+    height: auto;
+    font-size: 64px;
+  }
+
+  .hostel-layout-text-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .hostel-layout-description {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  .hostel-layout-buttons {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .hostel-layout-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hostel-layout-section {
+    padding: 32px 16px;
+  }
+
+  .hostel-layout-title {
+    font-size: 48px;
+  }
+
+  .hostel-layout-description {
+    font-size: 16px;
+  }
+
+  .hostel-layout-buttons {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+
+  .hostel-layout-btn-filled,
+  .hostel-layout-btn-outline {
+    width: 100%;
+  }
+}
