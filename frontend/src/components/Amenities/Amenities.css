@@ -215,6 +215,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-bottom: 8px;
+    padding-top: 8px;
     grid-template-columns: none;
   }
 

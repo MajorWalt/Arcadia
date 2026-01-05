@@ -18,7 +18,7 @@ export default function Header({ logoSrc }) {
           <nav className="nav-menu">
             <Link to="/villa">Villa</Link>
             <Link to="/hostel">Hostel</Link>
-            <a href="#rooms">Rooms</a>
+            <Link to="/room">Rooms</Link>
             <a href="#location">Location</a>
             <a href="#amenities">Amenities</a>
             <a href="#policies">Policies</a>
@@ -44,7 +44,7 @@ export default function Header({ logoSrc }) {
         <nav className="mobile-menu">
           <Link to="/villa" onClick={() => setIsMenuOpen(false)}>Villa</Link>
           <Link to="/hostel" onClick={() => setIsMenuOpen(false)}>Hostel</Link>
-          <a href="#rooms" onClick={() => setIsMenuOpen(false)}>Rooms</a>
+          <Link to="/room" onClick={() => setIsMenuOpen(false)}>Rooms</Link>
           <a href="#location" onClick={() => setIsMenuOpen(false)}>Location</a>
           <a href="#amenities" onClick={() => setIsMenuOpen(false)}>Amenities</a>
           <a href="#policies" onClick={() => setIsMenuOpen(false)}>Policies</a>

@@ -1,0 +1,396 @@
+/* Villa Suite Component Styles */
+
+.room-suite-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 60px 16px;
+  background-color: #D9D9D9;
+}
+
+.room-suite-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Left Section - Content Block */
+.room-suite-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 29px;
+  width: 394px;
+  max-width: 394px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Header */
+.room-suite-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.room-suite-title {
+  width: 319px;
+  font-family: 'Pagnol', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 99%;
+  color: #413A08;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 0 24px 0;
+
+}
+
+/* Description */
+.room-suite-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6A6A6A;
+  margin: 0;
+}
+
+/* Action Buttons */
+.room-suite-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #413A08;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  padding: 8px 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #413A08;
+  border: 2px solid #413A08;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Right Section - Carousel */
+.room-suite-carousel-wrapper {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.carousel-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+.carousel-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel-scroll::-webkit-scrollbar-thumb {
+  background: #413A08;
+  border-radius: 4px;
+}
+
+.carousel-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2d2906;
+}
+
+.carousel-scroll {
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #413A08 transparent;
+}
+
+/* Heart Icons - VillaSuite Component Only */
+.room-suite-heart-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.room-suite-heart-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.room-suite-heart-icon:hover {
+  opacity: 0.8;
+}
+
+/* Carousel Counter */
+.carousel-counter {
+  font-size: 14px;
+  color: #413A08;
+  font-weight: 500;
+}
+
+/* Mobile explore button */
+.mobile-explore-btn {
+  display: none;
+}
+
+/* Image Card */
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+  width: 274px;
+  height: 477px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  padding: 8px;
+  border-radius: 9999px;
+  background-color: #413A08;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+
+.carousel-btn:hover {
+  opacity: 0.9;
+}
+
+.carousel-btn.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Main container */
+  .room-suite-container {
+    padding: 20px 16px;
+    background-color: #D9D9D9;
+  }
+
+  /* Stack content + carousel */
+  .room-suite-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  /* Content block */
+  .room-suite-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    order: 0;
+  }
+
+  /* Header with inline title and button */
+  .room-suite-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  /* Title on one line */
+  .room-suite-title {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Description more compact */
+  .room-suite-description {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #413A08;
+  }
+
+  /* Hide desktop buttons */
+  .room-suite-buttons {
+    display: none;
+  }
+
+  /* Show mobile explore button in header */
+  .mobile-explore-btn {
+    display: flex;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 500;
+    background-color: #413A08;
+    color: white;
+    max-width: fit-content; 
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: auto; /* Push to right but stay contained */
+    
+  }
+
+  /* Carousel wrapper adjustments */
+  .room-suite-carousel-wrapper {
+    width: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Carousel container */
+  .carousel-container {
+    width: 100%;
+    order: 1;
+  }
+
+  /* Hearts move to bottom with counter */
+  .room-suite-heart-icons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    gap: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  .room-suite-heart-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Counter in the middle */
+  .carousel-counter {
+    font-size: 13px;
+    color: #413A08;
+    font-weight: 500;
+  }
+
+  /* Carousel cards resized for mobile */
+  .image-card {
+    width: 280px;
+    height: 380px;
+    flex-shrink: 0;
+  }
+
+  .image-card-label {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* Hide carousel buttons on mobile (swipe instead) */
+  .carousel-btn {
+    display: none;
+  }
+
+  /* Adjust carousel scroll for mobile */
+  .carousel-scroll {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+}

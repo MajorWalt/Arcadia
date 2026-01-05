@@ -1,0 +1,355 @@
+/* Color Variables */
+:root {
+  --color-alabaster-grey: #D9D9D9;
+  --color-light-cyan: #C4E9EB;
+  --color-dark-khaki: #413A08;
+  --color-carrot-orange: #E88B00;
+  --color-white: #FFFFFF;
+}
+
+/* ============ RESET ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============ HERO SECTION ============ */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============ DESKTOP BOOKING FORM ============ */
+.booking-form-desktop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 900px;
+  background: transparent;
+}
+
+.booking-form-desktop input {
+  flex: 1;
+  min-width: 180px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  background: var(--color-white);
+  color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: box-shadow 0.2s ease;
+}
+
+.booking-form-desktop input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(232, 139, 0, 0.3);
+}
+
+.booking-form-desktop input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.date-input {
+  flex: 1.5;
+}
+
+.guest-input {
+  flex: 1.2;
+}
+
+.room-input {
+  flex: 0.8;
+}
+
+.find-room-btn {
+  padding: 16px 32px;
+  background: var(--color-carrot-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+}
+
+.find-room-btn:hover {
+  background: #d97800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(232, 139, 0, 0.3);
+}
+
+.find-room-btn:active {
+  transform: translateY(0);
+}
+
+/* ============ HERO TITLE ============ */
+.hero-title {
+  display: block;
+  position: relative;
+  z-index: 10;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============ MOBILE ELEMENTS - HIDDEN ON DESKTOP ============ */
+.booking-card-mobile {
+  display: none;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: 600px;
+  }
+
+  .booking-form-desktop {
+    max-width: 700px;
+    gap: 8px;
+  }
+
+  .booking-form-desktop input {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .find-room-btn {
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 600px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .hero-content {
+    padding: 80px 20px 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  /* Hide desktop booking form on mobile */
+  .booking-form-desktop {
+    display: none;
+  }
+
+  /* Show and style hero title on mobile */
+  .hero-title {
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Show mobile booking card */
+  .booking-card-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    width: 100%;
+    max-width: 358px;
+    margin: 0 auto;
+    background: var(--color-dark-khaki);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+  }
+
+  .input-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: 48px;
+  }
+
+  .input-group {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .input-group.half {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  /* Check-in and Check-out styling */
+  .icon-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    gap: 10px;
+    width: 100%;
+    height: 48px;
+    background: var(--color-white);
+    border: none;
+  }
+
+  .input-row:first-child .input-group.half:first-child .icon-input {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .input-row:first-child .input-group.half:last-child .icon-input {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .heart-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .icon-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #797979;
+    background: transparent;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  .icon-input input::placeholder {
+    color: #797979;
+  }
+
+  /* Adults/Children and Room styling */
+  .input-group.half input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #797979;
+    background: var(--color-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 17px;
+  }
+
+  .input-row:nth-child(2) .input-group.half:first-child input {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .input-row:nth-child(2) .input-group.half:last-child input {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .input-group.half input:focus {
+    outline: none;
+  }
+
+  .search-btn {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    background: var(--color-carrot-orange);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .search-btn:hover {
+    background: #d97800;
+  }
+
+  .search-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content {
+    padding: 60px 16px 30px;
+  }
+
+  .booking-card-mobile {
+    max-width: 100%;
+  }
+}

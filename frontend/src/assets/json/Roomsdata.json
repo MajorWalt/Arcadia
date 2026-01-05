@@ -1,0 +1,76 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "The Harmony Room",
+      "description": "Experience ultimate comfort in the Harmony Suite, featuring elegant décor, spacious living areas, and modern amenities for a serene, luxurious getaway.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "harmony-room.png",
+      "type": "Suite",
+      "availability": "Only Available",
+      "amenities": ["WiFi", "AC", "TV", "Mini Bar"]
+    },
+    {
+      "id": 2,
+      "name": "The Solace Room",
+      "description": "Unwind in the Serenity Suite, designed for peaceful escapes with calming interiors, private balcony views, and premium amenities for total relaxation.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "solace-room.png",
+      "type": "Suite",
+      "availability": "Only Available",
+      "amenities": ["WiFi", "Balcony", "AC", "TV"]
+    },
+    {
+      "id": 3,
+      "name": "The Lovers' Suite",
+      "description": "Celebrate romance in the Lovers Suite, offering intimate spaces, cozy luxury, and breathtaking views—perfect for couples seeking an unforgettable retreat.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "lovers-suite.png",
+      "type": "Suite",
+      "availability": "Only Available",
+      "amenities": ["WiFi", "Romantic Setup", "AC", "TV"]
+    },
+    {
+      "id": 4,
+      "name": "The Mountain Room",
+      "description": "Stay close to nature in our Mountain Hostel Room, with rustic charm, essential comforts, and panoramic mountain views for adventurous travelers.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "mountain-room.png",
+      "type": "Hostel",
+      "availability": "Only Available",
+      "amenities": ["WiFi", "Mountain View", "Shared Bath"]
+    },
+    {
+      "id": 5,
+      "name": "The River Room",
+      "description": "Relax in the River Hostel Room, offering cozy simplicity, essential comforts, and easy access to scenic trails and outdoor adventures for budget-friendly travelers.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "river-room.png",
+      "type": "Hostel",
+      "availability": "Only Available",
+      "amenities": ["WiFi", "River View", "Shared Bath"]
+    },
+    {
+      "id": 6,
+      "name": "The Campground",
+      "description": "Reconnect with nature at our Campground, offering spacious sites, fire pits, and modern facilities for an authentic outdoor experience under the stars.",
+      "sleeps": 2,
+      "price": 120.00,
+      "currency": "USD",
+      "image": "campground.png",
+      "type": "Hostel",
+      "availability": "Unavailable",
+      "amenities": ["Fire Pit", "Outdoor", "Shared Facilities"]
+    }
+  ]
+}

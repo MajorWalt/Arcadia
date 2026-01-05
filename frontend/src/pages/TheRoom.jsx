@@ -2,9 +2,10 @@ import { useState } from 'react';
 import Header from '../components/Header/Header';
 import VillaHero from '../components/Hero/VillaHero';
 import VirtualTourHero from '../components/VirtualTour/VirtualTourHero';
-import VillaSuite from '../components/VillaSuite/VillaSuite2';
-import VillaLayout from '../components/VillaLayout/VillaLayout';
-import VillaAmenities from '../components/VillaAmenities/VillaAmenities';
+import HikingDominica from '../components/HikingDominica/HikingDominica';
+import RoomLayout from '../components/RoomLayout/RoomLayout';
+import RoomSuite from '../components/RoomSuite/RoomSuite';
+import RoomAmenities from '../components/RoomAmenities/RoomAmenities';
 import InLineAd from '../components/InLineAd/InLineAd';
 import DiscoverDominica from '../components/DiscoverDominica/DiscoverDominica';
 import Footer from '../components/Footer/Footer';
@@ -50,17 +51,19 @@ import headerVideo from '../assets/videos/villa-header.mp4';
 
 
 
-export default function VillaPage() {
+
+export default function RoomPage() {
   
 
   return (
-    <div className="villa-page">
+    <div className="room-page">
       <Header logoSrc={logoImg} />
       <VillaHero videoSrc={headerVideo} />
-      <VillaSuite />
+      <RoomSuite />
       <VirtualTourHero />
-      <VillaLayout />
-      <VillaAmenities />
+      <RoomLayout />
+      <HikingDominica />
+      <RoomAmenities />
       <FAQ 
         title="FAQ"
         description="Have questions? We’ve got answers! Explore our FAQ to find helpful information about your stay, amenities, and services."

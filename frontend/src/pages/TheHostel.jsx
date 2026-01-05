@@ -4,9 +4,6 @@ import Hostel2 from '../components/Hostel/Hostel2';
 import VillaHero from '../components/Hero/VillaHero';
 import VirtualTourHero from '../components/VirtualTour/VirtualTourHero';
 import HostelLayout from '../components/HostelLayout/HostelLayout';
-import VillaSuite from '../components/VillaSuite/VillaSuite2';
-import VillaLayout from '../components/VillaLayout/VillaLayout';
-import VillaAmenities from '../components/VillaAmenities/VillaAmenities';
 import InLineAd from '../components/InLineAd/InLineAd';
 import DiscoverDominica from '../components/DiscoverDominica/DiscoverDominica';
 import Footer from '../components/Footer/Footer';
@@ -50,11 +47,11 @@ import headerVideo from '../assets/videos/villa-header.mp4';
 
 
 
-export default function HomePage() {
+export default function HostelPage() {
   
 
   return (
-    <div className="home-page">
+    <div className="hostel-page">
       <Header logoSrc={logoImg} />
       <VillaHero videoSrc={headerVideo}/>
       <Hostel2/>
