@@ -19,7 +19,7 @@ export default function Header({ logoSrc }) {
             <Link to="/villa">Villa</Link>
             <Link to="/hostel">Hostel</Link>
             <Link to="/room">Rooms</Link>
-            <a href="#location">Location</a>
+            <Link to="/location">Location</Link>
             <a href="#amenities">Amenities</a>
             <a href="#policies">Policies</a>
             <a href="#contact">Contact</a>
@@ -45,8 +45,8 @@ export default function Header({ logoSrc }) {
           <Link to="/villa" onClick={() => setIsMenuOpen(false)}>Villa</Link>
           <Link to="/hostel" onClick={() => setIsMenuOpen(false)}>Hostel</Link>
           <Link to="/room" onClick={() => setIsMenuOpen(false)}>Rooms</Link>
-          <a href="#location" onClick={() => setIsMenuOpen(false)}>Location</a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)}>Amenities</a>
+          <Link to="/location" onClick={() => setIsMenuOpen(false)}>Location</Link>
+          <Link to="/amenities" onClick={() => setIsMenuOpen(false)}>Amenities</Link>
           <a href="#policies" onClick={() => setIsMenuOpen(false)}>Policies</a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
         </nav>

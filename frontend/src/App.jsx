@@ -4,7 +4,10 @@ import TheVilla from './pages/TheVilla';
 import TheHostel from './pages/TheHostel';
 import TheRoom from './pages/TheRoom';
 import TheRooms from './pages/TheRooms';
+import Location from './pages/Location';
+import Amenities from './pages/Amenities';
 import './App.css';
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
         <Route path="/hostel" element={<TheHostel />} />
         <Route path="/room" element={<TheRoom />} />
         <Route path="/rooms" element={<TheRooms />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/amenities" element={<Amenities />} />
       </Routes>
     </BrowserRouter>
   );
