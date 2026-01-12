@@ -49,6 +49,7 @@ export default function Location() {
       <Header logoSrc={logoImg} />
       <Hero videoSrc={headerVideo} />
       <HostelAmenities />
+      <DiscoverDominica2 />
       <GetAround />
       <Testimonials testimonials={testimonials} heartIconSrc={heartIcon} />
       <Footer />

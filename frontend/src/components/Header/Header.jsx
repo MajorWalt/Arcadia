@@ -20,7 +20,7 @@ export default function Header({ logoSrc }) {
             <Link to="/hostel">Hostel</Link>
             <Link to="/room">Rooms</Link>
             <Link to="/location">Location</Link>
-            <a href="#amenities">Amenities</a>
+            <Link to="/amenities">Amenities</Link>
             <a href="#policies">Policies</a>
             <a href="#contact">Contact</a>
           </nav>
