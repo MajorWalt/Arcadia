@@ -1,0 +1,368 @@
+/* Find Us Section */
+.hostel-amenities-section {
+  padding: 96px;
+  width: 100vw;
+  background: #D9D9D9;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hostel-hero-section {
+  position: relative;
+  width: 100vw;
+  height: 392px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 0px 24px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .hostel-hero-section {
+    width: 100vw;
+    height: calc(390px + 80px);
+    padding: 80px 16px 24px;
+    gap: 10px;
+    transform: translateX(-50%);
+    margin-top: -80px;
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+}
+
+.hostel-amenities-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Top Section - Content + Map */
+.hostel-amenities-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* Left Content */
+.hostel-amenities-content {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hostel-amenities-title {
+  font-family: 'Pagnol', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 99%;
+  color: #413A08;
+  margin: 0;
+}
+
+.hostel-amenities-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6A6A6A;
+  margin: 0;
+}
+
+.hostel-amenities-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hostel-amenities-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  transition: opacity 0.3s ease;
+}
+
+.hostel-amenities-btn-filled {
+  background: #413A08;
+  color: #FFFFFF;
+  border: none;
+}
+
+.hostel-amenities-btn-filled:hover {
+  opacity: 0.9;
+}
+
+.hostel-amenities-btn-outline {
+  background: transparent;
+  color: #413A08;
+  border: 1px solid #413A08;
+}
+
+.hostel-amenities-btn-outline:hover {
+  background: rgba(65, 58, 8, 0.05);
+}
+
+/* ============ MAP STYLES ============ */
+.map-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.map-container {
+  position: relative;
+  width: 834px;
+  height: 556px;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Precise Location Button */
+.map-precise-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3.5px 7px 4.5px;
+  position: absolute;
+  width: 104px;
+  height: 24px;
+  left: 8px;
+  top: 8px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  z-index: 10;
+}
+
+.map-precise-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+  width: 90px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.map-precise-icon {
+  width: 13px;
+  height: 12px;
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: #007BFE;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.map-precise-text {
+  width: 73px;
+  height: 16px;
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #007BFE;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1440px) {
+  .hostel-amenities-section {
+    padding: 80px 60px;
+  }
+
+  .map-container {
+    width: 700px;
+    height: 467px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hostel-amenities-section {
+    padding: 60px 40px;
+  }
+
+  .hostel-amenities-top {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hostel-amenities-content {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .hostel-amenities-title {
+    font-size: 56px;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hostel-amenities-section {
+    padding: 40px 20px;
+  }
+
+  .hostel-amenities-container {
+    gap: 40px;
+  }
+
+  .hostel-amenities-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hostel-amenities-content {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .hostel-amenities-title {
+    font-size: 48px;
+  }
+
+  .hostel-amenities-description {
+    font-size: 15px;
+  }
+
+  .hostel-amenities-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hostel-amenities-btn {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 350px;
+  }
+
+  .map-precise-button {
+    width: 90px;
+    height: 22px;
+    padding: 3px 6px;
+  }
+
+  .map-precise-content {
+    width: 78px;
+    gap: 3px;
+  }
+
+  .map-precise-icon {
+    font-size: 9px;
+  }
+
+  .map-precise-text {
+    font-size: 11px;
+    width: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hostel-amenities-section {
+    padding: 32px 16px;
+  }
+
+  .hostel-amenities-title {
+    font-size: 40px;
+  }
+
+  .hostel-amenities-description {
+    font-size: 14px;
+  }
+
+  .hostel-amenities-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hostel-amenities-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .map-precise-button {
+    width: 85px;
+    height: 20px;
+    padding: 2.5px 5px;
+  }
+
+  .map-precise-content {
+    width: 75px;
+  }
+
+  .map-precise-icon {
+    font-size: 8px;
+    width: 11px;
+    height: 10px;
+  }
+
+  .map-precise-text {
+    font-size: 10px;
+    width: 60px;
+  }
+}

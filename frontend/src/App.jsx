@@ -7,6 +7,7 @@ import TheRooms from './pages/TheRooms';
 import Location from './pages/Location';
 import Amenities from './pages/Amenities';
 import GuestHousePolicies from './pages/GuestHousePolicies';
+import ContactUs from './pages/ContactUs';
 import './App.css';
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/policies" element={<GuestHousePolicies />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   );

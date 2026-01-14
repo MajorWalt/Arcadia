@@ -22,7 +22,7 @@ export default function Header({ logoSrc }) {
             <Link to="/location">Location</Link>
             <Link to="/amenities">Amenities</Link>
             <Link to="/policies">Policies</Link>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </nav>
 
           <button className="book-now-btn">Book Now</button>
@@ -48,7 +48,7 @@ export default function Header({ logoSrc }) {
           <Link to="/location" onClick={() => setIsMenuOpen(false)}>Location</Link>
           <Link to="/amenities" onClick={() => setIsMenuOpen(false)}>Amenities</Link>
           <Link to="/policies" onClick={() => setIsMenuOpen(false)}>Policies</Link>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </nav>
       )}
     </header>
