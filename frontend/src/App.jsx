@@ -6,6 +6,7 @@ import TheRoom from './pages/TheRoom';
 import TheRooms from './pages/TheRooms';
 import Location from './pages/Location';
 import Amenities from './pages/Amenities';
+import GuestHousePolicies from './pages/GuestHousePolicies';
 import './App.css';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/rooms" element={<TheRooms />} />
         <Route path="/location" element={<Location />} />
         <Route path="/amenities" element={<Amenities />} />
+        <Route path="/policies" element={<GuestHousePolicies />} />
       </Routes>
     </BrowserRouter>
   );
