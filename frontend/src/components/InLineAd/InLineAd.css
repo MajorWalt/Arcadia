@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Pagnol';
+  src: url('/src/assets/fonts/Pagnol-Lower-Caps-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Desktop_In-Line_Ad */
 .inline-ad-container {
   display: flex;
@@ -14,9 +22,10 @@
 }
 
 .inline-ad-heading {
-  font-size: 48px;
+  font-family: 'Pagnol';
+  font-size: 64px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 0.99;
   color: white;
   margin: 0;
 }

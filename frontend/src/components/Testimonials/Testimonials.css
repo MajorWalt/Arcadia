@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Pagnol';
+  src: url('/src/assets/fonts/Pagnol-Lower-Caps-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Color Variables */
 :root {
   --color-alabaster-grey: #D9D9D9;
@@ -39,13 +47,11 @@
 }
 
 .testimonials-header h2 {
-  font-size: 56px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 0;
-  color: var(--color-white);
-  line-height: 1.2;
+  font-family: 'Pagnol';
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 99%;
+  color: #EFEDEA;
 }
 
 .video-badge {
@@ -76,7 +82,11 @@
   }
 
   .testimonials-header h2 {
-    font-size: 32px;
+    font-family: 'Pagnol';
+    font-size: 36px;
+    line-height: 0.99;
+    letter-spacing: 0;
+    
   }
 
   .heart-icon {

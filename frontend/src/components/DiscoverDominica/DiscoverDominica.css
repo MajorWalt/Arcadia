@@ -1,5 +1,11 @@
 /* Discover Dominica Hero Component Styles */
-
+@font-face {
+  font-family: 'Pagnol';
+  src: url('/src/assets/fonts/Pagnol-Lower-Caps-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 /* Hero_Advert */
 .discover-dominica-hero {
   display: flex;
@@ -51,9 +57,9 @@
 
 /* Title */
 .discover-dominica-title {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: 'Pagnol';
+  font-size: 64px;
+  line-height: 0.99;
   color: var(--color-white);
   margin: 0;
   white-space: nowrap;
@@ -164,11 +170,12 @@
   }
 
   .discover-dominica-title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 0.99;
     border-right: none;
     padding-right: 0;
+    letter-spacing: 0;
     margin-bottom: 8px;
     white-space: normal;
   }

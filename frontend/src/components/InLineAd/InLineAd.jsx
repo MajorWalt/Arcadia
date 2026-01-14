@@ -15,7 +15,7 @@ export default function InlineAd() {
 
   const content = (
     <>
-      <h2 className="inline-ad-heading">NOW 20% OFF</h2>
+      <h2 className="inline-ad-heading">NOW <br /> 20% OFF</h2>
       <p className="inline-ad-description">
         Nestled in the heart of the countryside, this charming villa offers a perfect blend of <br /> rustic elegance and modern comfort.
       </p>

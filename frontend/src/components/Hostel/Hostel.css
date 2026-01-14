@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Pagnol';
+  src: url('/src/assets/fonts/Pagnol-Lower-Caps-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 /* Hostel Component Styles */
 
 .hostel-container {
@@ -36,9 +43,9 @@
 }
 
 .hostel-title {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: 'Pagnol';
+  font-size: 96px;
+  line-height: 0.99;
   color: #413A08;
   margin: 0;
 }
@@ -288,12 +295,12 @@
 
   /* Title on one line */
   .hostel-title {
-    font-size: 22px;
-    line-height: 1.2;
-    font-weight: 600;
+    font-size: 36px;
+    line-height: 0.99;
+    font-weight: 500;
     white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    
+    letter-spacing: 0;
   }
 
   /* Description more compact */

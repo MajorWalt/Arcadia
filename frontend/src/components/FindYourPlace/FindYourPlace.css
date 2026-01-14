@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Pagnol';
+  src: url('/src/assets/fonts/Pagnol-Lower-Caps-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Find Your Place Component Styles */
 
 .find-your-place-container {
@@ -36,8 +44,8 @@
 }
 
 .find-your-place-title {
-  font-size: 56px;
-  font-weight: 700;
+  font-family: 'Pagnol';
+  font-size: 96px;
   line-height: 1.1;
   color: #413A08;
   margin: 0;
@@ -287,12 +295,12 @@
 
   /* Title on one line */
   .find-your-place-title {
-    font-size: 22px;
-    line-height: 1.2;
-    font-weight: 600;
+    font-size: 36px;
+    line-height: 0.99;
+    font-weight: 500;
+    letter-spacing: 0;
     white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    
   }
 
   /* Description more compact */

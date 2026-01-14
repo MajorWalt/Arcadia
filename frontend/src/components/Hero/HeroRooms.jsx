@@ -11,7 +11,7 @@ export default function HeroRooms({ videoSrc }) {
 
       <div className="hero-content">
         {/* Mobile Hero Title */}
-        <h1 className="hero-title">
+        <h1 className="hero-rooms-title">
           ESCAPE
           <br />
           THE CROWD
